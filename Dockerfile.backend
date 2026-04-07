@@ -1,0 +1,32 @@
+# Build stage
+FROM maven:3.9-eclipse-temurin-17 AS builder
+
+WORKDIR /app
+
+# Copy Maven settings
+COPY .docker/settings.xml /root/.m2/settings.xml
+
+# Copy pom.xml first for dependency layer caching
+COPY backend/pom.xml .
+
+# Download dependencies with retry logic
+RUN mvn -s /root/.m2/settings.xml dependency:resolve || \
+    mvn -s /root/.m2/settings.xml dependency:resolve || \
+    mvn -s /root/.m2/settings.xml dependency:resolve
+
+# Copy backend source code
+COPY backend/ .
+
+# Build with Maven
+RUN mvn -s /root/.m2/settings.xml clean package -DskipTests -q
+
+# Runtime stage
+FROM eclipse-temurin:17-jre-alpine
+
+WORKDIR /app
+
+COPY --from=builder /app/target/prueba-reservas-backend-1.0.0.jar app.jar
+
+EXPOSE 8080
+
+ENTRYPOINT ["java", "-jar", "app.jar"]

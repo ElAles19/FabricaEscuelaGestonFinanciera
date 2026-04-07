@@ -1,0 +1,55 @@
+# Frontend (Node)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+FigmaMake/dist/
+FigmaMake/build/
+.pnp
+.pnp.js
+
+# Backend (Maven)
+backend/target/
+backend/**/*.jar
+backend/**/*.war
+backend/.classpath
+backend/.factorypath
+backend/.project
+backend/.settings
+backend/*.jks
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Logs
+*.log
+logs/
+
+# Java
+.m2/
+*.class

@@ -1,0 +1,38 @@
+# Node
+node_modules/
+npm-debug.log
+dist/
+build/
+
+# Maven
+backend/target/
+*.jar
+*.war
+.m2/
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+.dockerignore
+Dockerfile*
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log
+logs/
