@@ -1,7 +1,7 @@
 
-  # Diseño de calendario de reservas
+  # Finances Management Page
 
-  This is a code bundle for Diseño de calendario de reservas. The original project is available at https://www.figma.com/design/NApSqeAEEE4QSfGiXnzIyW/Dise%C3%B1o-de-calendario-de-reservas.
+  This is a code bundle for Finances Management Page. The original project is available at https://www.figma.com/design/FoYlo2K8ioH7V9PwHc14PL/Finances-Management-Page.
 
   ## Running the code
 

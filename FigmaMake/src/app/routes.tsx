@@ -1,18 +1,19 @@
 import { createBrowserRouter } from "react-router";
-import { LoginPage } from "./pages/LoginPage";
-import { CalendarPage } from "./pages/CalendarPage";
+import { Layout } from "./components/Layout";
+import { Dashboard } from "./components/Dashboard";
+import { Budgets } from "./components/Budgets";
+import { Income } from "./components/Income";
+import { Expenses } from "./components/Expenses";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    Component: LoginPage,
-  },
-  {
-    path: "/calendario",
-    Component: CalendarPage,
-  },
-  {
-    path: "*",
-    Component: LoginPage,
+    Component: Layout,
+    children: [
+      { index: true, Component: Dashboard },
+      { path: "budgets", Component: Budgets },
+      { path: "income", Component: Income },
+      { path: "expenses", Component: Expenses },
+    ],
   },
 ]);

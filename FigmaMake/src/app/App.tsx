@@ -1,6 +1,11 @@
-import { RouterProvider } from 'react-router';
-import { router } from './routes';
+import { RouterProvider } from "react-router";
+import { router } from "./routes";
+import { FinanceProvider } from "./context/FinanceContext";
 
 export default function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <FinanceProvider>
+      <RouterProvider router={router} />
+    </FinanceProvider>
+  );
 }
