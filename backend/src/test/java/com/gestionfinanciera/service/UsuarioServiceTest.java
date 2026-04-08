@@ -1,15 +1,14 @@
-package com.pruebareservas.service;
+package com.gestionfinanciera.service;
 
-import com.pruebareservas.dto.UsuarioDTO;
-import com.pruebareservas.entity.Usuario;
-import com.pruebareservas.repository.UsuarioRepository;
+import com.gestionfinanciera.dto.UsuarioDTO;
+import com.gestionfinanciera.entity.Usuario;
+import com.gestionfinanciera.repository.UsuarioRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import java.time.LocalDateTime;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -38,7 +37,6 @@ class UsuarioServiceTest {
                 .apellido("Pérez")
                 .password("password123")
                 .autenticado(false)
-                .fechaRegistro(LocalDateTime.now())
                 .build();
     }
 

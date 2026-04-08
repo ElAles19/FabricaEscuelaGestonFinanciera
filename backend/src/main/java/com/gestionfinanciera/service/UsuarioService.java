@@ -5,7 +5,6 @@ import com.gestionfinanciera.dto.UsuarioDTO;
 import com.gestionfinanciera.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import java.util.Optional;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -74,7 +73,6 @@ public class UsuarioService {
                 .nombre(usuario.getNombre())
                 .apellido(usuario.getApellido())
                 .autenticado(usuario.getAutenticado())
-                .fechaRegistro(usuario.getFechaRegistro())
                 .build();
     }
 }

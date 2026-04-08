@@ -1,7 +1,6 @@
 package com.gestionfinanciera.dto;
 
 import lombok.*;
-import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
